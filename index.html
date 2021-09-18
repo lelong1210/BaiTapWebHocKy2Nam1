@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TRANG CHỦ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/fontawesome-free-5.15.3-web/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <link rel="stylesheet" href="./CSS/style.css">
+<style>
+</style>
+</head>
+<body class="Tong">
+<div>
+  <div class="Header">
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="" href="./index.html"><img class="zoom imgg" src="./CSS/img/LQL.png" alt="" style="width: 60px;"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><p>DANH MUC SẢN PHẨM</p>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./index.html"><i class="fas fa-home"></i> Trang Chủ</a></li>
+                <li><a href="./dienthoai.html"><i class="fas fa-mobile"></i> ĐIỆN THOẠI</a></li>
+                <li><a href="./MayTinhBang.html"><i class="fas fa-tablet-alt"></i> MÁY TÍNH BẢNG</a></li>
+                <li><a href="./MayTinh.html"><i class="fas fa-laptop"></i> MÁY TÍNH</a></li>
+                <li><a href="./phukien.html"><i class="fas fa-headphones"></i> PHỤ KIỆN</a></li>
+                <li><a href="./gheGaming.html"><i class="fas fa-wifi"></i> THIẾT BỊ MẠNG</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="tìm kiếm" name="search">
+            </div>
+            <button type="submit" class="btn btn-default">Tìm</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right" style="margin-right: 8%;">
+            <li><a href="./giohang.html"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <button type="button" class="btn btn-kc " data-toggle="modal" data-target="#myModalDangKy"><span class="glyphicon glyphicon-user"></span> ĐĂNG KÝ</button>
+            <button type="button" class="btn btn-kc" data-toggle="modal" data-target="#myModalDangNhap"><span class="glyphicon glyphicon-log-in"></span> ĐĂNG NHẬP</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <div class="phanModal">
+      <div class="modal fade" id="myModalDangKy" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Đăng Ký</h4>
+            </div>
+            <div class="modal-body">
+              <div class="khungdangky" style="margin-right: 6%; margin-left: 6%;margin-bottom: 3%;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><i class="fas fa-user" style="font-size: 25px;"></i></label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Tên đăng nhập...">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-lock" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="password" placeholder="Mật Khẩu...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-phone" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="text" placeholder="Số điện thoại">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-envelope" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="email" placeholder="email...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">ĐĂNG KÝ BẰNG</label>
+                        <div class="col-sm-7">
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-facebook-f" style="font-size: 30px;"></i></BUtton>
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-google" style="font-size: 30px;"></i></BUtton>
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-apple" style="font-size: 30px;"></i></BUtton>
+                        </div>
+                    </div>
+                </form>
+                <div class="btndangky text-center">
+                  <button type="button" class="btn"  onclick="CheckRong()">Đăng Ký</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal fade" id="myModalDangNhap" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Đăng Nhập</h4>
+            </div>
+            <div class="modal-body">
+              <div class="khungdangky" style="margin-right: 6%; margin-left: 6%;margin-bottom: 3%;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><i class="fas fa-user" style="font-size: 25px;"></i></label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Tên đăng nhập...">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-lock" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="password" placeholder="Mật Khẩu...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Đăng Nhập Bằng</label>
+                        <div class="col-sm-7">
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-facebook-f" style="font-size: 30px;"></i></BUtton>
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-google" style="font-size: 30px;"></i></BUtton>
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-apple" style="font-size: 30px;"></i></BUtton>
+                        </div>
+                    </div>
+                </form>
+                <div class="btndangky text-center">
+                  <!-- <button>hello</button> -->
+                  <button type="button" class="btn" onclick="CheckTKMK()">Đăng Nhập</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slider">
+      <div class="container">
+        <!-- <h2>SẢN</h2>   -->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img class="imgg" src="./CSS/img/SamSUng1.png" >
+            </div>
+
+            <div class="item">
+              <img class="imgg" src="./CSS/img/800-300-800x300-31.png" >
+            </div>>
+            <div class="item">
+              <img class="zoom imgg" src="./CSS/img/opp.png" alt="New york" >
+            </div>
+            <div class="item">
+              <img class="zoom imgg" src="./CSS/img/redmi.png" alt="New york" >
+            </div>
+            <div class="item">
+              <img class="zoom imgg" src="./CSS/img/laptop.png" alt="New york" >
+            </div>
+          </div>
+
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>  
+    </div>      
+  </div>
+  <div class="NoiDUng">
+    <div class="dienthoainoibat container-fluid">
+      <div class="panel panel-default" style="margin-top: 5%;">
+        <div class="panel panel-default" style="margin-left: 30%;margin-right: 30%;margin-top: -2%;">
+          <div class="tieude text-center"><h2>ĐIỆN THOẠI NỔI BẬT</h2></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-xanh-duong-new-600x600-600x600.jpg" alt="" class="imgg"></a>
+                <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">iPhone 12 64GB</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >21.990.000₫</a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/samsunggaly.jpg" alt="" class="imgg"></a>
+                <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Samsung Galaxy A52 5G</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >19.000.000 đ</a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/samm.jpg" alt="" class="imgg"></a>
+                <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Samsung Galaxy A02</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >19.000.000 đ</a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/remmm.jpg" alt="" class="imgg"></a>
+                <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Xiaomi Redmi 9T (4GB/64GB)</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >19.000.000 đ</a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/vivo.jpg" alt="" class="imgg"></a>
+              <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Vivo Y20s</a></p>
+              <strong>
+              <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >19.000.000 đ</a></p>
+              </strong>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/redxanh.jpg" alt="" class="imgg"></a>
+              <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Realme C20</a></p>
+              <strong>
+              <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >19.000.000 đ</a></p>
+              </strong>
+            </div>
+          </div>
+        </div>
+        <div class="xemthem">
+          <a href="./dienthoai.html" class="xemthemm text-center" style="font-size: 20px; text-decoration: none;"><p>xem thêm</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="maytinhnoibat container-fluid">
+      <div class="panel panel-default " style="margin-top: 5%;">
+        <div class="panel panel-default " style="margin-left: 30%;margin-right: 30%;margin-top: -2%;">
+          <div class="tieude text-center "><h2>MÁY TÍNH NỔI BẬT</h2></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">            
+              <div class="price text-center">
+                <strong>
+                  <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/acer.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Lenovo IdeaPad S145 15IIL i3 1005G1 (81W8001XVN)</a></p>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >10.490.000₫  </a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">            
+              <div class="price text-center">
+                <strong>
+                  <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/mac.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">MacBook Air 2017 128GB (MQD32SA/A)</a></p>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >19.990.000₫</a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">            
+              <div class="price text-center">
+                <strong>
+                  <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/lenov.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Lenovo IdeaPad Slim 3 15IIL05 i3 1005G1 (81WE003RVN)</a></p>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >11.990.000₫</a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">            
+              <div class="price text-center">
+                <strong>
+                  <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/lnv.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Lenovo IdeaPad Gaming 3 15IMH05 i7 10750H (81Y40068VN)</a></p>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >23.990.000₫</a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">            
+            <div class="price text-center">
+              <strong>
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/ntro.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Acer Nitro 5 AN515 55 5206 i5 10300H (NH.Q7NSV.007)</a></p>
+              <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >23.990.000₫</a></p>
+              </strong>
+            </div>
+          </div>
+          <div class="col-md-2">            
+            <div class="price text-center">
+              <strong>
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/hp.jpg " alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">HP Pavilion 15 eg0070TU i5 1135G7/Office H&S2019 (2L9H3PA)</a></p>
+              <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >17.990.000₫</a></p>
+              </strong>
+            </div>
+          </div>
+        </div>
+        <div class="xemthem">
+          <a href="./MayTinh.html" class="xemthemm text-center" style="font-size: 20px; text-decoration: none;"><p>xem thêm</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="tbletNoibat container-fluid">
+      <div class="panel panel-default" style="margin-top: 5%;">
+        <div class="panel panel-default" style="margin-left: 30%;margin-right: 30%;margin-top: -2%;">
+          <div class="tieude text-center"><h2>MÁY TÍNH BẢNG NỔI BẬT</h2></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/s7.jpg" alt="" style="width: 90%;"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;font-size: 20px;">Samsung Galaxy Tab S7</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;font-size: 20px;"  >5.190.000₫</a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/hw.jpg" alt="" class="imgtable"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Huawei MatePad T10s (Nền tảng Huawei Mobile Service)</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >5.290.000₫</a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/gtb.jpg" alt="" class="imgtable"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Samsung Galaxy Tab A7 (2020)</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >7.390.000₫</a></p>
+                </strong>
+              </div>
+          </div>
+          <div class="col-md-2">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/ltb.jpg" alt="" class="imgtable"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Lenovo Tab M10 - FHD Plus</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >5.190.000₫</a></p>
+                </strong>
+              </div>
+          </div>
+        </div>
+        <div class="xemthem">
+          <a href="./MayTinhBang.html" class="xemthemm text-center" style="font-size: 20px; text-decoration: none;"><p>xem thêm</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="PHUKIEN container-fluid">
+      <div class="panel panel-default" style="margin-top: 5%;">
+        <div class="panel panel-default" style="margin-left: 30%;margin-right: 30%;margin-top: -2%;">
+          <div class="tieude text-center"><h2>PHỤ KIỆN</h2></div>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/dp.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none ;">Xiaomi VXN4286GL</a></p>
+              <strong>
+                    <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;" class="text-danger">341.000₫</a></p>
+              </strong>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/cp.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none ;">Cáp Micro USB Xmobile LTM-02</a></p>
+              <strong>
+                    <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;" class="text-danger">60.000₫</a></p>
+              </strong>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/sd.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none ;">Thẻ nhớ MicroSD 200 GB SanDisk Class 10</a></p>
+              <strong>
+                    <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;" class="text-danger">1.190.000₫</a></p>
+              </strong>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/blsd.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none ;">USB OTG 3.1 64GB Type C Sandisk SDDDC3 Đen</a></p>
+              <strong>
+                    <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;" class="text-danger">450.000₫</a></p>
+              </strong>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/tng.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none ;">Tai nghe Bluetooth True Wireless Mozard DT920</a></p>
+              <strong>
+                    <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;" class="text-danger">760.000₫</a></p>
+              </strong>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="./CSS/img/sno.jpg" alt="" class="imgg"></a>
+            <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none ;">Tai nghe Bluetooth Chụp Tai Sony WH-1000XM4</a></p>
+              <strong>
+                    <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;" class="text-danger"></a></p>
+              </strong>
+            </div>
+          </div>
+        </div>
+        <div class="xemthem">
+          <a href="./phukien.html" class="xemthemm text-center" style="font-size: 20px; text-decoration: none;"><p>xem thêm</p></a>
+        </div>
+      </div>
+    </div>
+    <div class="THIETBIMANG container-fluid">
+      <div class="panel panel-default" style="margin-top: 5%;">
+        <div class="panel panel-default" style="margin-left: 30%;margin-right: 30%;margin-top: -2%;">
+          <div class="tieude text-center"><h2>THIẾT BỊ MẠNG</h2></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="https://cdn.tgdd.vn/Products/Images/4727/237527/router-wifi-chuan-wifi-6-bang-tan-kep-linksys-max-1-600x600.jpg" alt="" class="imgg"></a>
+              <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Router Wifi Chuẩn Wifi 6 Băng Tần Kép Linksys Max Stream MR7350</a></p>
+              <strong>
+                <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >2.890.000₫</a></p>
+              </strong>
+            </div>
+        </div>
+        <div class="col-sm-2">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="https://cdn.tgdd.vn/Products/Images/4727/237526/router-wifi-chuan-ac1900-bang-tan-kep-linksys-max-1-600x600.jpg" alt="" class="imgg"></a>
+                <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Router Wifi Chuẩn AC1900 Băng Tần Kép Linksys Max Stream EA7500SAH</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >2.790.000₫</a></p>
+                </strong>
+              </div>
+        </div>
+        <div class="col-sm-2">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="https://cdn.tgdd.vn/Products/Images/4727/237525/router-wifi-chuan-n-linksys-e1700-1-600x600.jpg" alt="" class="imgg"></a>
+                <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Router Wifi Chuẩn N Linksys E1700</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >1.190.000₫</a></p>
+                </strong>
+              </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="https://cdn.tgdd.vn/Products/Images/4727/237524/router-chuan-wifi-6-bang-tan-kep-linksys-e7350-1-2-600x600.jpg" alt="" class="imgg"></a>
+              <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Router Wifi Chuẩn Wifi 6 Băng Tần Kép Linksys E7350AH</a></p>
+              <strong>
+              <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >2.790.000₫</a></p>
+              </strong>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="price text-center">
+              <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="https://cdn.tgdd.vn/Products/Images/4727/235821/router-wifi-mesh-3-pack-ac1300-tp-link-deco-m5-ava-600x600.jpg" alt="" class="imgg"></a>
+              <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Router Wifi Mesh 3 Pack AC1300 TP-Link Deco M5 Trắng</a></p>
+              <strong>
+              <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >4.099.000₫</a></p>
+              </strong>
+            </div>
+        </div>
+        <div class="col-sm-2">
+              <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom imgg" src="https://cdn.tgdd.vn/Products/Images/4727/235818/router-wifi-mesh-3-pack-ac1200-tp-link-deco-m4-1-2-600x600.jpg" alt="" class="imgg"></a>
+                <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Router Wifi Mesh 3 Pack AC1200 TP-Link Deco M4 Trắng</a></p>
+                <strong>
+                  <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >3.199.000₫</a></p>
+                </strong>
+              </div>
+        </div>
+        </div>
+        <div class="xemthem">
+          <a href="./gheGaming.html" class="xemthemm text-center" style="font-size: 20px; text-decoration: none;"><p>xem thêm</p></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chanTrang">
+    <div class="NoiDung text-center">
+      <div class="row row-con">
+        <div class="col-sm-3  text-center">
+            <div class="ThongTinLienHe">
+                <div class="ThongTinLienHe">
+                    <h5>THÔNG TIN LIÊN HỆ</p>
+                </div>
+                <div class="dienthoai">
+                        <a href="./ChiTietDienThoai.html"><i class="fas fa-phone"></i> 0939430991</a>
+                </div>
+                <div class="email">
+                        <a href="./ChiTietDienThoai.html"><i class="fas fa-envelope-square"></i> lql@vku.udn.vn</a>
+                </div>
+                <div class="diachi">
+                    <a href="./ChiTietDienThoai.html"><i class="fas fa-map-marker-alt"></i> ĐỊA CHỈ</a>
+                    <p>ĐẠI HỌC VIỆT-HÀN VKU</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7388104523375!2d108.25104871482851!3d15.975010588939169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2sKorea%20-%20Vietnam%20Friendship%20Information%20Technology%20College!5e0!3m2!1sen!2s!4v1621347143074!5m2!1sen!2s" width="60%"style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 text-center">
+          <h5>CÁC LOẠI GIẤY CHỨNG NHẬN</p>
+            <div class="giaychungnhan panel panel-default">
+                <img src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" alt="" class="logoGCN">
+                <img src="https://fbeauty.vn/template/temp_2020/images/logo-beauty.png" alt="" class="logoGCN">
+                <img src="https://images.dmca.com/Badges/dmca_protected_31_120.png" alt="" class="logoGCN">
+
+            </div>
+        </div>
+        <div class="col-sm-3 text-center">
+            <h5>HỖ TRỢ MUA BÁN</h5>
+            <ul class="hotro">
+                <li><a href="./ChiTietDienThoai.html" style="margin-right: 10%;">Hỗ Trợ Đăng Tin</a></li>
+                <li><a href="./ChiTietDienThoai.html" style="margin-right: 10%;">Tin Tức & Khuyến Mãi</a></li>
+                <li><a href="./ChiTietDienThoai.html" style="margin-right: 10%;">Địa Điểm Mua Bá</a></li>
+                <li><a href="./ChiTietDienThoai.html" style="margin-right: 10%;">Hướng Dẫn Thanh Toán</a></li>
+                <li><a href="./ChiTietDienThoai.html" style="margin-right: 10%;">Chính Sách Bảo Mật</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 text-center">
+            <h5>MẠNG XÃ HỘI & TẢI VỀ</h5>
+            <div class="MangXaHoi">
+                <ul>
+                    <li><a href="./ChiTietDienThoai.html" style="margin-right: 10%;"><i class="fab fa-youtube"></i> YOUTUBE</a></li>
+                    <li><a href="./ChiTietDienThoai.html" style="margin-right: 10%;"><i class="fab fa-facebook"></i> FACEBOOK</a></li>
+                    <li><a href="./ChiTietDienThoai.html" style="margin-right: 10%;"><i class="fab fa-twitter-square"></i> TWITTER</a></li>
+                </ul>
+                <!-- <HR></HR> -->
+                <!-- <img class="zoom imgg" src="./CSS/img" alt="" class="logo"> -->
+                <!-- <img class="zoom imgg" src="./Css/img/logo.png" alt="" class="logo"> -->
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://dembuon.vn/lib/xmas.js"></script>
+<script src="./js/kiemtra.js"></script>
+</body>
+</html>

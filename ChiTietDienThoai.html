@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>iPhone 12 64GB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/fontawesome-free-5.15.3-web/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="./js/ckeditor/ckeditor.js"></script>
+<style>
+        .row a{
+          text-decoration: none;
+        }
+        .chanTrang{
+            background-color: black;
+            color: #ffffff;
+        }
+        .chanTrang a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        .chanTrang ul{
+            list-style-type: none;
+        }
+        a:hover {
+            color: red;
+        }
+        .col-sm-3{
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+        .logoGCN{
+            width: 100px;
+        }
+        .imgG {
+                width: 35%;
+                transform: rotate(0deg);
+                transition: transform 1s;
+            }
+        .imgG:hover {
+                width: 80%;
+                transform: rotateY(360deg);
+        }
+        .logo{
+            width: 30%;
+        }
+        .imgg{
+          width: 70%;
+        }
+        .imgtable{
+          width: 70%;
+        }
+</style>
+</head>
+<body>
+<div class="Tong">
+  <div class="Header">
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="" href="./index.html"><img class="zoom imgg" src="./CSS/img/LQL.png" alt="" style="width: 60px;"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><p>DANH MUC SẢN PHẨM</p>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./index.html"><i class="fas fa-home"></i> Trang Chủ</a></li>
+                <li><a href="./dienthoai.html"><i class="fas fa-mobile"></i> ĐIỆN THOẠI</a></li>
+                <li><a href="./MayTinhBang.html"><i class="fas fa-tablet-alt"></i> MÁY TÍNH BẢNG</a></li>
+                <li><a href="./MayTinh.html"><i class="fas fa-laptop"></i> MÁY TÍNH</a></li>
+                <li><a href="./phukien.html"><i class="fas fa-headphones"></i> PHỤ KIỆN</a></li>
+                <li><a href="./gheGaming.html"><i class="fas fa-wifi"></i> THIẾT BỊ MẠNG</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="tìm kiếm" name="search">
+            </div>
+            <button type="submit" class="btn btn-default">Tìm</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right" style="margin-right: 8%;">
+            <li><a href="./giohang.html"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <button type="button" class="btn btn-kc " data-toggle="modal" data-target="#myModalDangKy"><span class="glyphicon glyphicon-user"></span> ĐĂNG KÝ</button>
+            <button type="button" class="btn btn-kc" data-toggle="modal" data-target="#myModalDangNhap"><span class="glyphicon glyphicon-log-in"></span> ĐĂNG NHẬP</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <div class="phanModal">
+      <div class="modal fade" id="myModalDangKy" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Đăng Ký</h4>
+            </div>
+            <div class="modal-body">
+              <div class="khungdangky" style="margin-right: 6%; margin-left: 6%;margin-bottom: 3%;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><i class="fas fa-user" style="font-size: 25px;"></i></label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Tên đăng nhập...">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-lock" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="password" placeholder="Mật Khẩu...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-phone" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="text" placeholder="Số điện thoại">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-envelope" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="email" placeholder="email...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">ĐĂNG KÝ BẰNG</label>
+                        <div class="col-sm-7">
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-facebook-f" style="font-size: 30px;"></i></BUtton>
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-google" style="font-size: 30px;"></i></BUtton>
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-apple" style="font-size: 30px;"></i></BUtton>
+                        </div>
+                    </div>
+                </form>
+                <div class="btndangky text-center">
+                  <button type="button" class="btn"  onclick="CheckRong()">Đăng Ký</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal fade" id="myModalDangNhap" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Đăng Nhập</h4>
+            </div>
+            <div class="modal-body">
+              <div class="khungdangky" style="margin-right: 6%; margin-left: 6%;margin-bottom: 3%;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><i class="fas fa-user" style="font-size: 25px;"></i></label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Tên đăng nhập...">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-lock" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="password" placeholder="Mật Khẩu...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Đăng Nhập Bằng</label>
+                        <div class="col-sm-7">
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-facebook-f" style="font-size: 30px;"></i></BUtton>
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-google" style="font-size: 30px;"></i></BUtton>
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-apple" style="font-size: 30px;"></i></BUtton>
+                        </div>
+                    </div>
+                </form>
+                <div class="btndangky text-center">
+                  <!-- <button>hello</button> -->
+                  <button type="button" class="btn" onclick="CheckTKMK()">Đăng Nhập</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="NoiDung">
+    <div class="cachang">
+        <div class="slider container" style=" margin-top: 100px;">
+            <div class="row">
+              <div class="col-sm-7 text-center">
+                  <p class="" style="font-size: 30px;">THÔNG SỐ KĨ THUẬT</p>
+                  <table class="table table-striped">
+                      <tr>
+                          <td>Màn hình</td>
+                          <td>OLED,6.1",SUPER RETINA XDR</td>
+                      </tr>
+                      <tr>
+                        <td>Hệ điều hành</td>
+                        <td>IOS 14</td>
+                    </tr>
+                    <tr>
+                        <td>Camera trước</td>
+                        <td>2 camera 12 MP</td>
+                    </tr>
+                    <tr>
+                        <td>Camera sau</td>
+                        <td>12 MP</td>
+                    </tr>
+                    <tr>
+                        <td>Chip</td>
+                        <td>Apple A14 Bonuc</td>
+                    </tr>
+                    <tr>
+                        <td>Ram</td>
+                        <td>4GB</td>
+                    </tr>
+                    <tr>
+                        <td>Bộ nhớ trong</td>
+                        <td>64GB</td>
+                    </tr>
+                    <tr>
+                        <td>SIM</td>
+                        <td>1 Nano SIM & 1 eSIM,Hỗ trợ 5G</td>
+                    </tr>
+                    <tr>
+                        <td>Pin, sạc</td>
+                        <td>2815 mAh, Sạc nhanh</td>
+                     </tr>
+                   </table>
+                   <button type="button" class="btn btn-danger">XEM THÊM </button>
+              </div>
+              <div class="col-sm-5 text-center">
+                  <P class="" style="font-size: 30px;">Điện thoại iPhone 12 64GB</P>
+                  <img src="https://cdn.tgdd.vn/Products/Images/42/213031/iphone-12-xanh-duong-new-600x600-600x600.jpg" alt="" class="imgg">
+                  <p class="" style="font-size: 30px;">21.990.000₫</p>
+                  <button type="button" class="btn btn-danger" onclick="ThongBaoDaThem()">THÊM VÀO GIỎ HÀNG</button>
+                </div>
+            </div>
+            <div class="danhgia">
+                <h3>ĐÁNH GIÁ</h3>
+                <div class="media">
+                    <div class="media-left media-top">
+                      <img src="https://www.w3schools.com/howto/img_avatar2.png" class="media-object" style="width:80px">
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">TốT<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+                      <p>Sản phẩm tốt , mượt mà , xứng đáng với giá tiền , nhân viên nhiệt tình</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="media">
+                    <div class="media-left media-top">
+                      <img src="https://www.w3schools.com/w3images/avatar2.png" class="media-object" style="width:80px">
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">TốT<i class="fas fa-star"></i><i class="fas fa-star"></i></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+                      <p>Máy nhanh hết pin còn lại đều rất tốt</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="media">
+                    <div class="media-left media-top">
+                      <img src="https://www.w3schools.com/w3css/img_avatar3.png" class="media-object" style="width:80px">
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">VERY GOOD<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></h4>
+                      <p>chiến game rất tốt , mượt mà</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="vietdanhgia media">
+                    <div class="media-left media-top">
+                      <img src="https://www.w3schools.com/bootstrap4/img_avatar1.png" class="media-object" style="width:80px">
+                    </div>
+                    <div class="media-body">
+                        <form>
+                          <textarea name="editor1" id="editor1" rows="10" cols="80">
+                              ...
+                          </textarea>
+                          <script>
+                              // Replace the <textarea id="editor1"> with a CKEditor 4
+                              // instance, using default configuration.
+                              CKEDITOR.replace( 'editor1' );
+                          </script>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  </div>
+  <div class="chanTrang">
+    <div class="NoiDung text-center">
+      <div class="row row-con">
+        <div class="col-sm-3  text-center">
+            <div class="ThongTinLienHe">
+                <div class="ThongTinLienHe">
+                    <h5>THÔNG TIN LIÊN HỆ</p>
+                </div>
+                <div class="dienthoai">
+                        <a href=""><i class="fas fa-phone"></i> 0939430991</a>
+                </div>
+                <div class="email">
+                        <a href=""><i class="fas fa-envelope-square"></i> lql@vku.udn.vn</a>
+                </div>
+                <div class="diachi">
+                    <a href=""><i class="fas fa-map-marker-alt"></i> ĐỊA CHỈ</a>
+                    <p>ĐẠI HỌC VIỆT-HÀN VKU</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7388104523375!2d108.25104871482851!3d15.975010588939169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2sKorea%20-%20Vietnam%20Friendship%20Information%20Technology%20College!5e0!3m2!1sen!2s!4v1621347143074!5m2!1sen!2s" width="60%"style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 text-center">
+          <h5>CÁC LOẠI GIẤY CHỨNG NHẬN</p>
+            <div class="giaychungnhan panel panel-default">
+                <img src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" alt="" class="logoGCN">
+                <img src="https://fbeauty.vn/template/temp_2020/images/logo-beauty.png" alt="" class="logoGCN">
+                <img src="https://images.dmca.com/Badges/dmca_protected_31_120.png" alt="" class="logoGCN">
+
+            </div>
+        </div>
+        <div class="col-sm-3 text-center">
+            <h5>HỖ TRỢ MUA BÁN</h5>
+            <ul class="hotro">
+                <li><a href="" style="margin-right: 10%;">Hỗ Trợ Đăng Tin</a></li>
+                <li><a href="" style="margin-right: 10%;">Tin Tức & Khuyến Mãi</a></li>
+                <li><a href="" style="margin-right: 10%;">Địa Điểm Mua Bá</a></li>
+                <li><a href="" style="margin-right: 10%;">Hướng Dẫn Thanh Toán</a></li>
+                <li><a href="" style="margin-right: 10%;">Chính Sách Bảo Mật</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 text-center">
+            <h5>MẠNG XÃ HỘI & TẢI VỀ</h5>
+            <div class="MangXaHoi">
+                <ul>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-youtube"></i> YOUTUBE</a></li>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-facebook"></i> FACEBOOK</a></li>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-twitter-square"></i> TWITTER</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+      <script src="./js/kiemtra.js"></script>
+      <script type="text/javascript" src="https://dembuon.vn/lib/xmas.js"></script>
+      <!-- <script src="widgEditor/scripts/widgEditor.js"></script> -->
+</body>
+</html>

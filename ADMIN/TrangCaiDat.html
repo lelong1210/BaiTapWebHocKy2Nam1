@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Cài Đặt</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./CSS/fontawesome-free-5.15.3-web/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <!-- font -->
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Abril Fatface' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Actor' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Adamina' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Advent Pro' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Akaya Kanadaka' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Akaya Telivigala' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Alfa Slab One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Ballet' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Barriecito' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Bungee Outline' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Codystar' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Zen Dots' rel='stylesheet'>
+        <!-- het font -->
+    <style>
+        body {
+        font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        }
+
+        .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+        color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        }
+
+        .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        }
+
+        .openbtn:hover {
+        background-color: #444;
+        }
+
+        #main {
+        transition: margin-left .5s;
+        padding: 16px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+        }
+        .row a{
+          text-decoration: none;
+        }
+        .chanTrang{
+            background-color: black;
+            color: #ffffff;
+        }
+        .chanTrang a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        .chanTrang ul{
+            list-style-type: none;
+        }
+        a:hover {
+            color: red;
+        }
+        .col-sm-3{
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+        .logoGCN{
+            width: 100px;
+        }
+        .imgG {
+                width: 35%;
+                transform: rotate(0deg);
+                transition: transform 1s;
+            }
+        .imgG:hover {
+                width: 80%;
+                transform: rotateY(360deg);
+        }
+        .logo{
+            width: 30%;
+        }
+        .imgg{
+          width: 70%;
+        }
+        .imgtable{
+          width: 70%;
+        }
+        .chieucaoothongtin{
+          /* height: 80px; */
+          line-height: 80px;
+          background-color: aqua;
+        }
+        .bgcolor{
+          background-color: rgb(255, 166, 0);
+        }
+    </style>
+    </head>
+    <body>
+        <div class="tong" id="kieuchu">
+            <div class="Header">
+                <div class="container-fluid">
+                  <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <a class="" href="#"><img src="./CSS/img/LQL.png" alt="" style="width: 60px;"></a>
+                      </div>
+                      <ul class="nav navbar-nav">
+                      </ul>
+                      <form class="navbar-form navbar-left" action="/action_page.php">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="tìm kiếm" name="search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Tìm</button>
+                      </form>
+                      <form class="navbar-form navbar-right">
+                            <p style="color: #ffffff;">le quang long <img src="./CSS/img/anhdaidien.png" alt="" style="width: 50px;"></p>
+                      </form>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            <div class="row phannoidung">
+
+                    <div id="mySidebar" class="sidebar">
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                      <a href="./TrangQuanTri.html" class="active">Tổng Quát</a>
+                      <a href="./ThongKe.html" >Thống Kê</a>
+                      <a href="./DonHang.html" >Đơn Hàng</a>
+                      <a href="./TrangCaiDat.html">Cài Đặt</a>
+                      <a href="../index.html">Thoát</a>
+                    </div>
+                    
+                    <div id="main">
+                        <button class="openbtn active" onclick="openNav()">☰ </button>
+                        <div class="box" id="bachRauu" style="background-repeat: no-repeat;">
+                            <div class="topbar">
+                                <div class="toggle" onclick="toggleMenu();"><i class="fa fa-bars"></i></div>
+                            </div>
+                            <div class="BachRau container text-center">
+                                <h2>BACKGROUND</h2>
+                                <div class="row">
+                                    <!-- <button onclick="Red()">Toggle dark mode</button> -->
+                                    <div class="col-sm-3"><button onclick="Red()" class="btn btn-lg " style="width: 100%;margin-top: 20px;background-color:red;">RED</button></div>
+                                    <div class="col-sm-3"><button onclick="Green()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color:green;">Green</button></div>
+                                    <div class="col-sm-3"><button onclick="White()"class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: rgb(255, 255, 255);">WHITE</button></div>
+                                    <div class="col-sm-3"><button onclick="Blueviolet()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: blueviolet;">BLUEVIOLET</button></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3"><button onclick="Brown()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: Brown;">BROWN</button></div>
+                                    <div class="col-sm-3"><button onclick="BurlyWood()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: BurlyWood;">BURLYWOOD</button></div>
+                                    <div class="col-sm-3"><button onclick="CadetBlue()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: #5F9EA0;">CADETBLUET</button></div>
+                                    <div class="col-sm-3"><button onclick="Chartreuse()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: Chartreuse;">CHARTREUSE</button></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3"><button onclick="Chocolate()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: Chocolate;">CHOCOLATE</button></div>
+                                    <div class="col-sm-3"><button onclick="Coral()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: Coral;">CORAL</button></div>
+                                    <div class="col-sm-3"><button onclick="CornflowerBlue()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: CornflowerBlue;">CORNFLOWERBLUE</button></div>
+                                    <div class="col-sm-3"><button onclick="Gold()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: Gold;">GOLD</button></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3"><button onclick="Grey()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: Grey;">GREY</button></div>
+                                    <div class="col-sm-3"><button onclick="HotPink()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: HotPink;">HOTPINK</button></div>
+                                    <div class="col-sm-3"><button onclick="LightCoral()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: LightCoral;">LIGHTCORAL</button></div>
+                                    <div class="col-sm-3"><button onclick="Maroon()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: Maroon;">MAROON</button></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-3"><button onclick="Orange()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: Orange;">ORANGE</button></div>
+                                    <div class="col-sm-3"><button onclick="Wheat()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: Wheat;">WHEAT</button></div>
+                                    <div class="col-sm-3"><button onclick="Linen()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: Linen;">LINEN</button></div>
+                                    <div class="col-sm-3"><button onclick="MistyRose()" class="btn btn-lg" style="width: 100%;margin-top: 20px;background-color: MistyRose;">MISTYROSE</button></div>
+                                </div>
+                            </div>
+                            <div class="FontChu container text-center" style="margin-top: 100px;">
+                                    <div class="VanBan" style="border: black solid 1px; border-radius: 20px;">
+                                        <p>Fruit is one of the foods that are good for health. They provide the human body with many vitamins and minerals, replenish nutrients for healthy body and prevent diseases. Some of the benefits of eating fruits can be mentioned such as avoiding cancer, preventing cardiovascular disease, blood pressure. Apples, oranges, bananas are fruits that help you have a healthy heart.</p>
+                                        <p>Eating fruits is also good for memory, helping you lose weight and make your skin beautiful. In particular, fruits have a combination of substances such as Vitamin C, vitamin A that increase the resistance of the immune system. Because of these immense effects, each of us should add fruit to our daily diet.</p>
+                                    </div>
+                                    <h2>FONT</h2>
+                                    <div class="row">
+                                        <!-- <button onclick="Red()">Toggle dark mode</button> -->
+                                        <div class="col-sm-3"><button onclick="Sofia()" class="btn btn-lg " style="width: 100%;margin-top: 20px;font-family: Sofia;">Sofia</button></div>
+                                        <div class="col-sm-3"><button onclick="ABeeZee()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: 'Alata';">ABeeZee</button></div>
+                                        <div class="col-sm-3"><button onclick="Abel()"class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Abel">Abel</button></div>
+                                        <div class="col-sm-3"><button onclick="AbhayaLibre()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family:'Abhaya Libre'">Abhaya Libre</button></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3"><button onclick="AbrilFatface()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Abril Fatface">Abril Fatface</button></div>
+                                        <div class="col-sm-3"><button onclick="Aclonica()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Aclonica">Aclonica</button></div>
+                                        <div class="col-sm-3"><button onclick="Acme()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Acme">Acme</button></div>
+                                        <div class="col-sm-3"><button onclick="Actor()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Actor">Actor</button></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3"><button onclick="Adamina()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Adamina">Adamina</button></div>
+                                        <div class="col-sm-3"><button onclick="AdventPro()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family:Arial, Helvetica, sans-serif">Advent Pro</button></div>
+                                        <div class="col-sm-3"><button onclick="AguafinaScript()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family:Aguafina Script;">Aguafina Script</button></div>
+                                        <div class="col-sm-3"><button onclick="AkayaKanadaka()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Akaya Kanadaka">Akaya Kanadaka</button></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3"><button onclick="AkayaTelivigala()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Akaya Telivigala">Akaya Telivigala</button></div>
+                                        <div class="col-sm-3"><button onclick="AlfaSlabOne()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Alfa Slab One">Alfa Slab One</button></div>
+                                        <div class="col-sm-3"><button onclick="Amaranth()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family:Amaranth">Amaranth</button></div>
+                                        <div class="col-sm-3"><button onclick="Barriecito()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family:Barriecito">Barriecito</button></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3"><button onclick="Ballet()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Ballet">Ballet</button></div>
+                                        <div class="col-sm-3"><button onclick="BungeeOutline()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family:Bungee Outline">Bungee Outline</button></div>
+                                        <div class="col-sm-3"><button onclick="Codystar()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Codystar">Codystar</button></div>
+                                        <div class="col-sm-3"><button onclick="ZenDots()" class="btn btn-lg" style="width: 100%;margin-top: 20px;font-family: Arial, Helvetica, sans-serif">Zen Dots</button></div>
+                                    </div>
+                            </div>
+                            
+                            <hr style="background-color: rgb(200, 82, 82); margin-left: 10%;margin-right: 10%;">
+                        </div>
+                    </div>
+                    
+                    <script>
+                    function openNav() {
+                      document.getElementById("mySidebar").style.width = "250px";
+                      document.getElementById("main").style.marginLeft = "250px";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidebar").style.width = "0";
+                      document.getElementById("main").style.marginLeft= "0";
+                    }
+                    </script>
+                    <script src="../js/KhachHangDangDung.js"></script>
+                    <script src="../js/KhachHangGiaoDichNhieuNhat.js"></script>
+                    <script src="../js/KieuChu.js"></script>
+                    <script src="../js/MauSac.js"></script>
+            </div>
+        </div>
+    </body>
+
+
+</html>

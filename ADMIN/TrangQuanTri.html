@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quản Trị</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./CSS/fontawesome-free-5.15.3-web/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        body {
+        font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        }
+
+        .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+        color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        }
+
+        .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #111;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        }
+
+        .openbtn:hover {
+        background-color: #444;
+        }
+
+        #main {
+        transition: margin-left .5s;
+        padding: 16px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+        }
+        .row a{
+          text-decoration: none;
+        }
+        .chanTrang{
+            background-color: black;
+            color: #ffffff;
+        }
+        .chanTrang a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+        }
+        .chanTrang ul{
+            list-style-type: none;
+        }
+        a:hover {
+            color: red;
+        }
+        .col-sm-3{
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+        .logoGCN{
+            width: 100px;
+        }
+        .imgG {
+                width: 35%;
+                transform: rotate(0deg);
+                transition: transform 1s;
+            }
+        .imgG:hover {
+                width: 80%;
+                transform: rotateY(360deg);
+        }
+        .logo{
+            width: 30%;
+        }
+        .imgg{
+          width: 70%;
+        }
+        .imgtable{
+          width: 70%;
+        }
+        .chieucaoothongtin{
+          /* height: 80px; */
+          line-height: 80px;
+          background-color: aqua;
+        }
+        .bgcolor{
+          background-color: rgb(255, 166, 0);
+        }
+    </style>
+    </head>
+    <body>
+        <div class="tong">
+            <div class="Header">
+                <div class="container-fluid">
+                  <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                      <div class="navbar-header">
+                        <a class="" href="#"><img src="./CSS/img/LQL.png" alt="" style="width: 60px;"></a>
+                      </div>
+                      <ul class="nav navbar-nav">
+                      </ul>
+                      <form class="navbar-form navbar-left" action="/action_page.php">
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="tìm kiếm" name="search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Tìm</button>
+                      </form>
+                      <form class="navbar-form navbar-right">
+                            <p style="color: #ffffff;">le quang long <img src="./CSS/img/anhdaidien.png" alt="" style="width: 50px;"></p>
+                      </form>
+                    </div>
+                  </nav>
+                </div>
+              </div>
+            <div class="row phannoidung">
+
+                    <div id="mySidebar" class="sidebar">
+                      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                      <a href="./TrangQuanTri.html" class="active">Tổng Quát</a>
+                      <a href="./ThongKe.html" >Thống Kê</a>
+                      <a href="./DonHang.html" >Đơn Hàng</a>
+                      <a href="./TrangCaiDat.html">Cài Đặt</a>
+                      <a href="../index.html">Thoát</a>
+                    </div>
+                    
+                    <div id="main">
+                        <button class="openbtn active" onclick="openNav()">☰ </button>
+                        <div class="row container text-center panel panel-danger" style="margin-right: 15%;margin-left: 15%;">
+                            <div class="col-sm-3 panel panel-danger bgcolor">Câu Hỏi
+                              <div class="row">
+                                <div class="col-sm-6">
+                                  <p>Đã Trả Lời <span class="badge">7</span></p>
+                                </div>
+                                <div class="col-sm-6">
+                                  <p>Chưa Trả Lời <span class="badge">19</span></p>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-3 panel panel-danger bgcolor">Khách Hàng
+                                <p><span class="badge">1820</span></p>
+                            </div>
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-3 panel panel-danger bgcolor">Lợi Nhuận(tháng này)
+                                <p><span class="badge">1829$</span></p>
+                            </div>
+                        </div>
+                        <div class="row container text-center panel panel-danger" style="margin-left: 15%;margin-right: 15%;">
+                            <div class="col-sm-6">
+                              <h3>KHÁCH HÀNG ĐANG TRUY CẬP</h3>
+                              <canvas id="KhachHangDangDung" style="width:100%;max-width:600px"></canvas>
+                            </div>
+                            <div class="col-sm-6">
+                              <h3>KHÁCH HÀNG GIAO DỊCH NHIỀU NHẤT($)</h3>
+                              <canvas id="KhachHangGiaoDichNhieuNhat" style="width:100%;max-width:600px"></canvas>
+                            </div>
+                        </div> 
+                        <div class="row nhiemvu text-center panel panel-danger" style="margin-left: 15%;;margin-right: 15%;">
+                            <h3>Nhiệm Vụ</h3>
+                            <div class="col-sm-12 ">
+                                <div class="row">
+                                  <div class="col-sm-4 tennhiemvu">
+                                    Hoàn Thành Trang Khách Hàng
+                                  </div>
+                                  <div class="col-sm-8 tiendo">
+                                      <div class="progress">
+                                         <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 80%;">
+                                            80%
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <div class="row">
+                                  <div class="col-sm-4 tennhiemvu">
+                                    Ký Hợp Đông Với Công ty FBT
+                                  </div>
+                                  <div class="col-sm-8 tiendo">
+                                      <div class="progress">
+                                        <div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 70%;">
+                                            70%
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <div class="row">
+                                  <div class="col-sm-4 tennhiemvu">
+                                    Nộp Báo Cáo
+                                  </div>
+                                  <div class="col-sm-8 tiendo">
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success progress-bar-striped" style="width: 100%;">
+                                            100%
+                                        </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 ">
+                                <div class="row">
+                                  <div class="col-sm-4 tennhiemvu">
+                                    Bài Tập JS
+                                  </div>
+                                  <div class="col-sm-8 tiendo">
+                                    <div class="progress">
+                                      <div class="progress-bar progress-bar-danger progress-bar-striped" style="width:40%">
+                                        40% 
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+
+                        </div> 
+                    </div>
+                    
+                    <script>
+                    function openNav() {
+                      document.getElementById("mySidebar").style.width = "250px";
+                      document.getElementById("main").style.marginLeft = "250px";
+                    }
+                    
+                    function closeNav() {
+                      document.getElementById("mySidebar").style.width = "0";
+                      document.getElementById("main").style.marginLeft= "0";
+                    }
+                    </script>
+                    <script src="../js/KhachHangDangDung.js"></script>
+                    <script src="../js/KhachHangGiaoDichNhieuNhat.js"></script>
+            </div>
+        </div>
+    </body>
+
+
+</html>

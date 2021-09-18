@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>PHỤ KIỆN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/fontawesome-free-5.15.3-web/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+<div class="Tong">
+  <div class="Header">
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="" href="./index.html"><img class="zoom imgg" src="./CSS/img/LQL.png" alt="" style="width: 60px;"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><p>DANH MUC SẢN PHẨM</p>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./index.html"><i class="fas fa-home"></i> Trang Chủ</a></li>
+                <li><a href="./dienthoai.html"><i class="fas fa-mobile"></i> ĐIỆN THOẠI</a></li>
+                <li><a href="./MayTinhBang.html"><i class="fas fa-tablet-alt"></i> MÁY TÍNH BẢNG</a></li>
+                <li><a href="./MayTinh.html"><i class="fas fa-laptop"></i> MÁY TÍNH</a></li>
+                <li><a href="./phukien.html"><i class="fas fa-headphones"></i> PHỤ KIỆN</a></li>
+                <li><a href="./gheGaming.html"><i class="fas fa-wifi"></i> THIẾT BỊ MẠNG</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="tìm kiếm" name="search">
+            </div>
+            <button type="submit" class="btn btn-default">Tìm</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right" style="margin-right: 8%;">
+            <li><a href="./giohang.html"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <button type="button" class="btn btn-kc " data-toggle="modal" data-target="#myModalDangKy"><span class="glyphicon glyphicon-user"></span> ĐĂNG KÝ</button>
+            <button type="button" class="btn btn-kc" data-toggle="modal" data-target="#myModalDangNhap"><span class="glyphicon glyphicon-log-in"></span> ĐĂNG NHẬP</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <div class="phanModal">
+      <div class="modal fade" id="myModalDangKy" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Đăng Ký</h4>
+            </div>
+            <div class="modal-body">
+              <div class="khungdangky" style="margin-right: 6%; margin-left: 6%;margin-bottom: 3%;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><i class="fas fa-user" style="font-size: 25px;"></i></label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Tên đăng nhập...">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-lock" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="password" placeholder="Mật Khẩu...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-phone" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="text" placeholder="Số điện thoại">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-envelope" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="email" placeholder="email...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">ĐĂNG KÝ BẰNG</label>
+                        <div class="col-sm-7">
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-facebook-f" style="font-size: 30px;"></i></BUtton>
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-google" style="font-size: 30px;"></i></BUtton>
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-apple" style="font-size: 30px;"></i></BUtton>
+                        </div>
+                    </div>
+                </form>
+                <div class="btndangky text-center">
+                  <button type="button" class="btn"  onclick="CheckRong()">Đăng Ký</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal fade" id="myModalDangNhap" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Đăng Nhập</h4>
+            </div>
+            <div class="modal-body">
+              <div class="khungdangky" style="margin-right: 6%; margin-left: 6%;margin-bottom: 3%;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><i class="fas fa-user" style="font-size: 25px;"></i></label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Tên đăng nhập...">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-lock" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="password" placeholder="Mật Khẩu...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Đăng Nhập Bằng</label>
+                        <div class="col-sm-7">
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-facebook-f" style="font-size: 30px;"></i></BUtton>
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-google" style="font-size: 30px;"></i></BUtton>
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-apple" style="font-size: 30px;"></i></BUtton>
+                        </div>
+                    </div>
+                </form>
+                <div class="btndangky text-center">
+                  <!-- <button>hello</button> -->
+                  <button type="button" class="btn" onclick="CheckTKMK()">Đăng Nhập</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="NoiDung">
+    <div class="nutchon row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-8">
+        <div class="row text-center">
+          <div class="col-sm-2 kc xoay"><a class="nut" href="#PINSACDUPHONG">DỰ PHÒNG</a></div>
+          <div class="col-sm-2 kc xoay"><a class="nut" href="#SACCAP">SẠC ,CÁP</a></div>
+          <div class="col-sm-2 kc xoay"><a class="nut" href="#LUUTRU">LƯU TRỮ</a></div>
+          <div class="col-sm-2 kc xoay"><a class="nut" href="#TUICHONGSOC">CHỐNGSỐC</a></div>
+          <!-- <div class="col-sm-2 kc xoay"><a class="nut" href="#NOKIA">NOKIA</a></div> -->
+          <div class="col-sm-2 kc xoay"><a class="nut" href="#TAINGHE">TAI NGHE</a></div>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+    <div class="cachang">
+      <div class="slider">
+        <div class="panel panel-primary" style="margin-top: 7%;">
+            <div class="panel panel-primary " id="PINSACDUPHONG" style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+                <h3 class="text-center">PIN DỰ PHÒNG</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                      <div class="price text-center" id="IPAD">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/57/237679/hydrus-pj-jp196-ava-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Hydrus PJ JP196</a></p>
+                        <strong>
+                          <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >392.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/57/236300/anker-powercore-slim-a1231-ava-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">Anker PowerCore Slim A1231</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >1.000.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/57/236255/oppo-vooc-30w-pbv02-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">OPPO PBV02</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >1.800.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/57/235121/235121-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">Mophie 20.000 mAh Powerstation XXL</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >1.192.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/57/235771/energizer-ue20011pq-ava-fix2-600x600-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Energizer UE20011PQ</a></p>
+                      <strong>
+                      <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >880.000₫</a></p>
+                      </strong>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/57/236253/oppo-pbt02-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">OPPO PBT02</a></p>
+                      <strong>
+                      <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >980.000₫</a></p>
+                      </strong>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/57/235120/235120-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">Mophie 10.000 mAh Powerstation XL</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >792.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/57/234502/234502-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">AVA LA Y65</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >320.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/57/233280/polymer-20000mah-type-c-25w-samsung-eb-p5300-avatar-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">Samsung EB-P5300</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/57/228892/sac-du-phong-10000mah-type-c-powerslim-jp213-avatar-1-600x600-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">Xmobile PowerSlim PJ JP213</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >560.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+            </div>
+         </div>
+         <div class="panel panel-primary" id ="SACCAP" style="margin-top: 7%;">
+          <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">SẠC ,CÁP</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/58/238654/cap-type-c-1m-hydrus-dr-t01-ava-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Cáp Type C 1m Hydrus DR-T01</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >90.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/58/238653/cap-lightning-1m-hydrus-dr-l03-ava-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="" style="text-decoration: none;">Cáp Lightning 1m Hydrus DR-L03</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >90.000₫  </a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/9499/236577/supervooc-65w-oppo-vca7jauh-new-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Adapter Sạc SuperVOOC 65W OPPO VCA7JAUH</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >980.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">.
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/9499/236576/vooc-30w-oppo-vc56jauh-new-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Adapter Sạc VOOC 30W OPPO VC56JAUH</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >740.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="price text-center">
+                  <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/9499/232816/adapter-sac-type-c-pd-20w-xmobile-tc20b-xanh-navy-avatar-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Sạc Xmobile TC20B</a></p>
+                  <strong>
+                    <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >300.000₫</a></p>
+                  </strong>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="price text-center">
+                  <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/9499/232815/adapter-sac-type-c-pd-20w-xmobile-tc20w-trang-avatar-1-600x600.jpg" alt="" style="width: 300px;"></a>
+              <p class="text-center"><a href="" style="text-decoration: none;">Adapter chuyển đổi Type C 6 in 1 Belkin F4U092</a></p>
+                  <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >2.159.000₫  </a></p>
+                  </strong>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                    <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/9499/232655/adapter-chuyen-doi-type-c-6-in-1-belkin-f4u092-xam-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">Adapter Sạc SuperVOOC 65W OPPO VCA7JAUH</a></p>
+                    <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >980.000₫</a></p>
+                    </strong>
+                    </div>
+            </div>
+            <div class="col-sm-3">.
+                    <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/9499/232817/adapter-sac-type-c-pd-20w-xmobile-tc20p-hong-avatar-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">Adapter Sạc Type C PD 20W Xmobile TC20P HồnG</a></p>
+                    <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >300.000₫</a></p>
+                    </strong>
+                    </div>
+            </div>
+            </div>
+        </div>
+        <div id="LENOVO" class="panel panel-primary" style="margin-top: 7%;">
+          <div class="panel panel-primary " id="LUUTRU" style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">LƯU TRỮ</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/55/83106/the-nho-microsd-200gb-class10uhs1-fix-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Thẻ nhớ MicroSD 200 GB SanDisk Class 10</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >1.183.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/55/71046/the-nho-microsd-128gb-class-10-uhs1-fix-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="" style="text-decoration: none;">Thẻ nhớ MicroSD 128 GB Class 10</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >890.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/55/69975/the-nho-microsd-64gb-class-10u1-1-600x600.png" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Thẻ nhớ MicroSD 64 GB Class 10</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >450.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/55/69974/the-nho-microsd-32gb-class-10-305520-105555-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Thẻ nhớ MicroSD 32 GB Class 10</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >250.000₫    </a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/55/69973/the-nho-microsd-16gb-class-10-fix-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">Thẻ nhớ MicroSD 16 GB Class 10</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >200.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/75/148652/usb-30-16gb-sandisk-cz600-1-2-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">USB 3.0 16 GB Sandisk CZ600</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >144.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="price text-center">
+                  <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/75/83124/usb-sandisk-sdcz50-8gb-20-xanh-duong-1-5-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="" style="text-decoration: none;">USB 2.0 8 GB Sandisk SDCZ50</a></p>
+                  <strong>
+                  <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >120.000₫</a></p>
+                  </strong>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/75/201290/usb-30-lexar-v100-jumpdrive-16gb-trang-xam-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">USB 3.0 Lexar V100 JumpDrive 16 GB Trắng Xám</a></p>
+                    <strong>
+                      <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >180.000₫</a></p>
+                    </strong>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div id="TUICHONGSOC" class="panel panel-primary" style="margin-top: 7%;">
+            <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+                <h3 class="text-center">TÚI CHỐNG SỐC</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/7923/232797/tui-chong-soc-laptop-156-inch-co-ngan-phu-evalu-lm-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Túi chống sốc Laptop 15.6 inch có ngăn phụ eValu LMP-T004P</a></p>
+                        <strong>
+                          <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >280.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/7923/232796/tui-chong-soc-laptop-14-inch-co-ngan-phu-evalu-lmp-luc-lam-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">Túi chống sốc Laptop 14 inch có ngăn phụ eValu LMP-T004D</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >250.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/7923/232795/balo-laptop-156-inch-xiaomi-city-2-zjb4192gl-xam-d-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">Balo Laptop 15.6 inch Xiaomi City 2 ZJB4192GL Xám Đậm</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >790.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/7923/226343/tui-chong-soc-laptop-15-tucano-top-second-skin-ava-600x600-2-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">Túi chống sốc Laptop 15 inch Tucano Top Second Skin</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >850.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/7923/221948/tui-deo-laptop-13-inch-tomtoc-a50-c01g-xam-221948-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">Túi đeo Laptop 13 inch TOMTOC A50-C01G Xám</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >1.899.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/7923/221947/tui-deo-laptop-135-inch-tomtoc-a47-c01g-xam-221947-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Túi đeo Laptop 13.5 inch TOMTOC A47-C01G Xám</a></p>
+                      <strong>
+                      <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >1.499.000₫</a></p>
+                      </strong>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/7923/221945/tui-chong-soc-laptop-13-inch-tomtoc-a22-c02b01-221945-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">Túi chống sốc Laptop 13 inch TOMTOC A22-C02B01 Xanh đậm</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >939.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+            </div>
+          </div>
+        <div class="panel panel-primary" id="TAINGHE" style="margin-top: 7%;">
+          <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">TAI NGHE</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/54/238293/bluetooth-tws-lg-tone-free-hbs-fn4-trang-thumb-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Tai nghe Bluetooth True Wireless LG Tone Free HBS-FN4 Trắng</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >2.790.000₫₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="price text-center">
+                  <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/54/238231/bluetooth-tws-samsung-galaxy-bub-r175-ava-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Tai nghe Bluetooth True Wireless Samsung Galaxy Buds+ R175</a></p>
+                  <strong>
+                    <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >1.490.000₫</a></p>
+                  </strong>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="price text-center">
+                  <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/54/238028/bluetooth-true-wireless-hydrus-ts12bc-ava-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Tai nghe Bluetooth True Wireless Hydrus TS12BC</a></p>
+                  <strong>
+                    <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >550.000₫</a></p>
+                  </strong>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/54/236331/bluetooth-airpods-max-apple-ava-600x600.jpg" alt="" style="width: 300px;"></a>
+                <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Tai nghe chụp tai Bluetooth AirPods Max Apple MGYH3/ MGYJ3/ MGYL3</a></p>
+                <strong>
+                    <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >12.690.000₫</a></p>
+                </strong>
+                </div>
+            </div>
+                <div class="col-sm-3">
+                    <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/54/236262/bluetooth-tws-xiaomi-earbuds-basic-2-ava-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Tai nghe Bluetooth True Wireless Xiaomi Earbuds Basic 2 BHR4272GL</a></p>
+                    <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >790.000₫</a></p>
+                    </strong>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/54/235955/bluetooth-mozard-k8-ava-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Tai nghe Bluetooth Mozard K8</a></p>
+                    <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >315.000₫</a></p>
+                    </strong>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/54/235590/tai-nghechup-tai-gaming-rapoo-vh520c-den--8-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Tai nghe chụp tai Gaming Rapoo VH520C Đen</a></p>
+                    <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >539.000₫</a></p>
+                    </strong>
+                    </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="price text-center">
+                <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/54/233270/bluetooth-audio-technica-ath-clr100bt-den-avatar-1-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Tai nghe Bluetooth Thể Thao Audio Technica ATH-CLR100BT</a></p>
+                <strong>
+                    <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >632.000₫</a></p>
+                </strong>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="chanTrang">
+    <div class="NoiDung text-center">
+      <div class="row row-con">
+        <div class="col-sm-3  text-center">
+            <div class="ThongTinLienHe">
+                <div class="ThongTinLienHe">
+                    <h5>THÔNG TIN LIÊN HỆ</p>
+                </div>
+                <div class="dienthoai">
+                        <a href="./ChiTietDienThoai.html"><i class="fas fa-phone"></i> 0939430991</a>
+                </div>
+                <div class="email">
+                        <a href="./ChiTietDienThoai.html"><i class="fas fa-envelope-square"></i> lql@vku.udn.vn</a>
+                </div>
+                <div class="diachi">
+                    <a href="./ChiTietDienThoai.html"><i class="fas fa-map-marker-alt"></i> ĐỊA CHỈ</a>
+                    <p>ĐẠI HỌC VIỆT-HÀN VKU</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7388104523375!2d108.25104871482851!3d15.975010588939169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2sKorea%20-%20Vietnam%20Friendship%20Information%20Technology%20College!5e0!3m2!1sen!2s!4v1621347143074!5m2!1sen!2s" width="60%"style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 text-center">
+          <h5>CÁC LOẠI GIẤY CHỨNG NHẬN</p>
+            <div class="giaychungnhan panel panel-default">
+                <img src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" alt="" class="logoGCN">
+                <img src="https://fbeauty.vn/template/temp_2020/images/logo-beauty.png" alt="" class="logoGCN">
+                <img src="https://images.dmca.com/Badges/dmca_protected_31_120.png" alt="" class="logoGCN">
+
+            </div>
+        </div>
+        <div class="col-sm-3 text-center">
+            <h5>HỖ TRỢ MUA BÁN</h5>
+            <ul class="hotro">
+                <li><a href="" style="margin-right: 10%;">Hỗ Trợ Đăng Tin</a></li>
+                <li><a href="" style="margin-right: 10%;">Tin Tức & Khuyến Mãi</a></li>
+                <li><a href="" style="margin-right: 10%;">Địa Điểm Mua Bá</a></li>
+                <li><a href="" style="margin-right: 10%;">Hướng Dẫn Thanh Toán</a></li>
+                <li><a href="" style="margin-right: 10%;">Chính Sách Bảo Mật</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 text-center">
+            <h5>MẠNG XÃ HỘI & TẢI VỀ</h5>
+            <div class="MangXaHoi">
+                <ul>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-youtube"></i> YOUTUBE</a></li>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-facebook"></i> FACEBOOK</a></li>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-twitter-square"></i> TWITTER</a></li>
+                </ul>
+                <!-- <HR></HR> -->
+                <!-- <img src="./CSS/img" alt="" class="logo"> -->
+                <!-- <img src="./Css/img/logo.png" alt="" class="logo"> -->
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://dembuon.vn/lib/xmas.js"></script>
+<script src="./js/kiemtra.js"></script>
+</body>
+</html>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MÁY TÍNH BẢNG</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/fontawesome-free-5.15.3-web/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./CSS/style.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="Tong">
+  <div class="Header">
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="" href="./index.html"><img class="zoom imgg" src="./CSS/img/LQL.png" alt="" style="width: 60px;"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><p>DANH MUC SẢN PHẨM</p>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./index.html"><i class="fas fa-home"></i> Trang Chủ</a></li>
+                <li><a href="./dienthoai.html"><i class="fas fa-mobile"></i> ĐIỆN THOẠI</a></li>
+                <li><a href="./MayTinhBang.html"><i class="fas fa-tablet-alt"></i> MÁY TÍNH BẢNG</a></li>
+                <li><a href="./MayTinh.html"><i class="fas fa-laptop"></i> MÁY TÍNH</a></li>
+                <li><a href="./phukien.html"><i class="fas fa-headphones"></i> PHỤ KIỆN</a></li>
+                <li><a href="./gheGaming.html"><i class="fas fa-wifi"></i> THIẾT BỊ MẠNG</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="tìm kiếm" name="search">
+            </div>
+            <button type="submit" class="btn btn-default">Tìm</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right" style="margin-right: 8%;">
+            <li><a href="./giohang.html"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <button type="button" class="btn btn-kc " data-toggle="modal" data-target="#myModalDangKy"><span class="glyphicon glyphicon-user"></span> ĐĂNG KÝ</button>
+            <button type="button" class="btn btn-kc" data-toggle="modal" data-target="#myModalDangNhap"><span class="glyphicon glyphicon-log-in"></span> ĐĂNG NHẬP</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <div class="phanModal">
+      <div class="modal fade" id="myModalDangKy" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Đăng Ký</h4>
+            </div>
+            <div class="modal-body">
+              <div class="khungdangky" style="margin-right: 6%; margin-left: 6%;margin-bottom: 3%;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><i class="fas fa-user" style="font-size: 25px;"></i></label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Tên đăng nhập...">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-lock" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="password" placeholder="Mật Khẩu...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-phone" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="text" placeholder="Số điện thoại">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-envelope" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="email" placeholder="email...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">ĐĂNG KÝ BẰNG</label>
+                        <div class="col-sm-7">
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-facebook-f" style="font-size: 30px;"></i></BUtton>
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-google" style="font-size: 30px;"></i></BUtton>
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-apple" style="font-size: 30px;"></i></BUtton>
+                        </div>
+                    </div>
+                </form>
+                <div class="btndangky text-center">
+                  <button type="button" class="btn"  onclick="CheckRong()">Đăng Ký</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal fade" id="myModalDangNhap" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Đăng Nhập</h4>
+            </div>
+            <div class="modal-body">
+              <div class="khungdangky" style="margin-right: 6%; margin-left: 6%;margin-bottom: 3%;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><i class="fas fa-user" style="font-size: 25px;"></i></label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Tên đăng nhập...">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-lock" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="password" placeholder="Mật Khẩu...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Đăng Nhập Bằng</label>
+                        <div class="col-sm-7">
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-facebook-f" style="font-size: 30px;"></i></BUtton>
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-google" style="font-size: 30px;"></i></BUtton>
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-apple" style="font-size: 30px;"></i></BUtton>
+                        </div>
+                    </div>
+                </form>
+                <div class="btndangky text-center">
+                  <!-- <button>hello</button> -->
+                  <button type="button" class="btn" onclick="CheckTKMK()">Đăng Nhập</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="NoiDung">
+    <div class="nutchon row">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-8">
+        <div class="row text-center">
+          <div class="col-sm-2 xoay kc"><a class="nut" href="#IPAD">IPAD</a></div>
+          <div class="col-sm-2 xoay kc"><a class="nut" href="#SAMSUNG">SAMSUNG</a></div>
+          <div class="col-sm-2 xoay kc"><a class="nut" href="#HUAWEI">HUAWEI</a></div>
+          <div class="col-sm-2 xoay kc"><a class="nut" href="#LENOVO">LENOVO</a></div>
+          <!-- <div class="col-sm-2 xoay kc"><a class="nut" href="#NOKIA">NOKIA</a></div> -->
+          <div class="col-sm-2 xoay kc"><a class="nut" href="#MOBELL">MOBELL</a></div>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+    <div class="cachang">
+      <div class="slider">
+        <div class="panel panel-primary" style="margin-top: 7%;">
+            <div class="panel panel-primary " id="IPAD" style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+                <h3 class="text-center">IPAD</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                      <div class="price text-center" id="IPAD">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/228808/ipad-air-4-wifi-64gb-2020-xanhduong-600x600-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">iPad Air 4 Wifi 64GB (2020)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >16.190.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/238651/ipad-pro-2021-129-inch-silver-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">iPad Pro M1 12.9 inch WiFi Cellular 256GB (2021)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >Dự kiến: 37.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/238649/ipad-pro-2021-129-inch-gray-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">iPad Pro M1 12.9 inch WiFi Cellular 128GB (2021)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >Dự kiến: 33.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/221776/ipad-pro-12-9-inch-wifi-cellular-128gb-2020-bac-600x600-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">iPad Pro 12.9 inch Wifi Cellular 128GB (2020)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >31.190.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/238626/ipad-pro-2021-11-inch-silver-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">iPad Pro M1 11 inch WiFi Cellular 256GB (2021)</a></p>
+                      <strong>
+                      <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >Dự kiến: 29.990.000₫</a></p>
+                      </strong>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/237699/ipad-pro-2021-129-inch-gray-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">iPad Pro M1 12.9 inch WiFi 128GB (2021)</a></p>
+                      <strong>
+                      <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >Dự kiến: 29.990.000₫</a></p>
+                      </strong>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/221775/ipad-pro-12-9-inch-wifi-128gb-2020-bac-600x600-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">iPad Pro 12.9 inch Wifi 128GB (2020)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >27.190.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/238624/ipad-pro-2021-11-inch-gray-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">iPad Pro M1 11 inch WiFi Cellular 128GB (2021)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >Dự kiến: 25.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/238623/ipad-pro-2021-11-inch-silver-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">iPad Pro M1 11 inch WiFi 256GB (2021)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >Dự kiến: 25.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/221774/ipad-pro-11-inch-wifi-cellular-128gb-2020-bac-600x600-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">iPad Pro 11 inch Wifi Cellular 128GB (2020)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >27.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+            </div>
+         </div>
+         <div class="panel panel-primary" id ="SAMSUNG" style="margin-top: 7%;">
+          <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">SAMSUNG</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/225031/samsung-galaxy-tab-s7-gold-new-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Samsung Galaxy Tab S7</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >18.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/228144/samsung-galaxy-tab-a7-2020-vangdong-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="" style="text-decoration: none;">Samsung Galaxy Tab A7 (2020)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >7.990.000₫ </a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/219912/samsung-galaxy-tab-s6-lite-600x600-2-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Samsung Galaxy Tab S6 Lite</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >9.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">.
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/205751/samsung-galaxy-tab-a8-t295-2019-silver-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Samsung Galaxy Tab A8 8" T295 (2019)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >3.690.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+          </div>
+        </div>
+        <div id="HUAWEI" class="panel panel-primary" style="margin-top: 7%;">
+          <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">HUAWEI</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/233257/huawei-t10s-600x600-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Huawei MatePad T10s (Nền tảng Huawei Mobile Service)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >5.140.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/233258/huawei-matepad-xanh-600x600-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="" style="text-decoration: none;">Huawei MatePad 64GB (Nền tảng Huawei Mobile Service)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >6.590.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/236953/huawei-matepad-xam-128gb-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Huawei MatePad 128GB (Nền tảng Huawei Mobile Service)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >7.490.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/232266/huawei-mediapad-t5-101-inch-3gb-32gb-vang-114920-114910-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Huawei Mediapad T5 10.1 inch (3GB/32GB) Vàng</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >5.190.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-4">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/196071/huawei-mediapad-t5-den-600x600-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">Huawei Mediapad T5 10.1"</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >5.190.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+              <div class="col-sm-5">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/223131/huawei-matepad-t8-xanh-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">Huawei MatePad T8 (Nền tảng Huawei Mobile Service)</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >3.090.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div id="LENOVO" class="panel panel-primary" style="margin-top: 7%;">
+          <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">LENOVO</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/235365/tab-m10-fhd-plus-600-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Lenovo Tab M10 - FHD Plus</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >5.390.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/235366/tab-m10-gen-2-600x600-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="" style="text-decoration: none;">Lenovo Tab M10 - Gen 2</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >4.390.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/221928/lenovo-tab-m10-black-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Lenovo Tab M10</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >3.690.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/222806/lenovo-tab-a22-xam-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Lenovo Tab M8 (TB-8505X)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >3.490.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/235363/lenovo-tab-m7-600x600-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">Lenovo Tab M7</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >2.590.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/197627/lenovo-tab-e7-tb-7104i-600x600-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Lenovo Tab E7 TB-7104I</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >1.390.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+          </div>
+        </div>
+        <div class="panel panel-primary" id="MOBELL" style="margin-top: 7%;">
+          <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">MOBELL</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/522/73547/mobell-tab-7s-vangdong-600x600-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">MOBELL TAB 7S</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="chanTrang">
+    <div class="NoiDung text-center">
+      <div class="row row-con">
+        <div class="col-sm-3  text-center">
+            <div class="ThongTinLienHe">
+                <div class="ThongTinLienHe">
+                    <h5>THÔNG TIN LIÊN HỆ</p>
+                </div>
+                <div class="dienthoai">
+                        <a href="./ChiTietDienThoai.html"><i class="fas fa-phone"></i> 0939430991</a>
+                </div>
+                <div class="email">
+                        <a href="./ChiTietDienThoai.html"><i class="fas fa-envelope-square"></i> lql@vku.udn.vn</a>
+                </div>
+                <div class="diachi">
+                    <a href="./ChiTietDienThoai.html"><i class="fas fa-map-marker-alt"></i> ĐỊA CHỈ</a>
+                    <p>ĐẠI HỌC VIỆT-HÀN VKU</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7388104523375!2d108.25104871482851!3d15.975010588939169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2sKorea%20-%20Vietnam%20Friendship%20Information%20Technology%20College!5e0!3m2!1sen!2s!4v1621347143074!5m2!1sen!2s" width="60%"style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 text-center">
+          <h5>CÁC LOẠI GIẤY CHỨNG NHẬN</p>
+            <div class="giaychungnhan panel panel-default">
+                <img src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" alt="" class="logoGCN">
+                <img src="https://fbeauty.vn/template/temp_2020/images/logo-beauty.png" alt="" class="logoGCN">
+                <img src="https://images.dmca.com/Badges/dmca_protected_31_120.png" alt="" class="logoGCN">
+
+            </div>
+        </div>
+        <div class="col-sm-3 text-center">
+            <h5>HỖ TRỢ MUA BÁN</h5>
+            <ul class="hotro">
+                <li><a href="" style="margin-right: 10%;">Hỗ Trợ Đăng Tin</a></li>
+                <li><a href="" style="margin-right: 10%;">Tin Tức & Khuyến Mãi</a></li>
+                <li><a href="" style="margin-right: 10%;">Địa Điểm Mua Bá</a></li>
+                <li><a href="" style="margin-right: 10%;">Hướng Dẫn Thanh Toán</a></li>
+                <li><a href="" style="margin-right: 10%;">Chính Sách Bảo Mật</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 text-center">
+            <h5>MẠNG XÃ HỘI & TẢI VỀ</h5>
+            <div class="MangXaHoi">
+                <ul>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-youtube"></i> YOUTUBE</a></li>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-facebook"></i> FACEBOOK</a></li>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-twitter-square"></i> TWITTER</a></li>
+                </ul>
+                <!-- <HR></HR> -->
+                <!-- <img src="./CSS/img" alt="" class="logo"> -->
+                <!-- <img src="./Css/img/logo.png" alt="" class="logo"> -->
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://dembuon.vn/lib/xmas.js"></script>
+<script src="./js/kiemtra.js"></script>
+</body>
+</html>

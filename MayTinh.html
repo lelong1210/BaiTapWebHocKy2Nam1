@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Máy Tính</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/fontawesome-free-5.15.3-web/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./CSS/style.css">
+<style>
+</style>
+</head>
+<body>
+<div class="Tong">
+  <div class="Header">
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="" href="./index.html"><img class="zoom imgg" src="./CSS/img/LQL.png" alt="" style="width: 60px;"></a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><p>DANH MUC SẢN PHẨM</p>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="./index.html"><i class="fas fa-home"></i> Trang Chủ</a></li>
+                <li><a href="./dienthoai.html"><i class="fas fa-mobile"></i> ĐIỆN THOẠI</a></li>
+                <li><a href="./MayTinhBang.html"><i class="fas fa-tablet-alt"></i> MÁY TÍNH BẢNG</a></li>
+                <li><a href="./MayTinh.html"><i class="fas fa-laptop"></i> MÁY TÍNH</a></li>
+                <li><a href="./phukien.html"><i class="fas fa-headphones"></i> PHỤ KIỆN</a></li>
+                <li><a href="./gheGaming.html"><i class="fas fa-wifi"></i> THIẾT BỊ MẠNG</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left" action="/action_page.php">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="tìm kiếm" name="search">
+            </div>
+            <button type="submit" class="btn btn-default">Tìm</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right" style="margin-right: 8%;">
+            <li><a href="./giohang.html"><i class="fas fa-shopping-cart"></i> GIỎ HÀNG</a></li>
+          </ul>
+          <form class="navbar-form navbar-right">
+            <button type="button" class="btn btn-kc " data-toggle="modal" data-target="#myModalDangKy"><span class="glyphicon glyphicon-user"></span> ĐĂNG KÝ</button>
+            <button type="button" class="btn btn-kc" data-toggle="modal" data-target="#myModalDangNhap"><span class="glyphicon glyphicon-log-in"></span> ĐĂNG NHẬP</button>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <div class="phanModal">
+      <div class="modal fade" id="myModalDangKy" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Đăng Ký</h4>
+            </div>
+            <div class="modal-body">
+              <div class="khungdangky" style="margin-right: 6%; margin-left: 6%;margin-bottom: 3%;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><i class="fas fa-user" style="font-size: 25px;"></i></label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Tên đăng nhập...">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-lock" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="password" placeholder="Mật Khẩu...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-phone" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="text" placeholder="Số điện thoại">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-envelope" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="email" placeholder="email...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">ĐĂNG KÝ BẰNG</label>
+                        <div class="col-sm-7">
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-facebook-f" style="font-size: 30px;"></i></BUtton>
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-google" style="font-size: 30px;"></i></BUtton>
+                          <BUtton style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-apple" style="font-size: 30px;"></i></BUtton>
+                        </div>
+                    </div>
+                </form>
+                <div class="btndangky text-center">
+                  <button type="button" class="btn"  onclick="CheckRong()">Đăng Ký</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="modal fade" id="myModalDangNhap" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title text-center">Đăng Nhập</h4>
+            </div>
+            <div class="modal-body">
+              <div class="khungdangky" style="margin-right: 6%; margin-left: 6%;margin-bottom: 3%;">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"><i class="fas fa-user" style="font-size: 25px;"></i></label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="focusedInput" type="text" placeholder="Tên đăng nhập...">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label"><i class="fas fa-lock" style="font-size: 25px;"></i></label>
+                        <div class="col-sm-10">
+                          <input class="form-control" id="focusedInput" type="password" placeholder="Mật Khẩu...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Đăng Nhập Bằng</label>
+                        <div class="col-sm-7">
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-facebook-f" style="font-size: 30px;"></i></BUtton>
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-google" style="font-size: 30px;"></i></BUtton>
+                          <BUtton onclick="DangNhapBang()" style="margin-left: 3%;border-radius: 30%;"><i class="fab fa-apple" style="font-size: 30px;"></i></BUtton>
+                        </div>
+                    </div>
+                </form>
+                <div class="btndangky text-center">
+                  <!-- <button>hello</button> -->
+                  <button type="button" class="btn" onclick="CheckTKMK()">Đăng Nhập</button>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="NoiDung">
+    <div class="nutchon row kc">
+      <div class="col-sm-3"></div>
+      <div class="col-sm-8">
+        <div class="row text-center">
+          <div class="col-sm-2 xoay"><a class="nut" href="#MACBOOK">MACBOOK</a></div>
+          <div class="col-sm-2 xoay"><a class="nut" href="#ACER">ACER</a></div>
+          <div class="col-sm-2 xoay"><a class="nut" href="#HP">HP</a></div>
+          <div class="col-sm-2 xoay"><a class="nut" href="#ASUS">ASUS</a></div>
+          <!-- <div class="col-sm-2 xoay"><a class="nut" href="#NOKIA">NOKIA</a></div> -->
+          <div class="col-sm-2 xoay"><a class="nut" href="#MSI">MSI</a></div>
+        </div>
+      </div>
+      <div class="col-sm-3"></div>
+    </div>
+    <div class="cachang">
+      <div class="slider">
+        <div class="panel panel-primary" style="margin-top: 7%;">
+            <div class="panel panel-primary " id="MACBOOK" style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+                <h3 class="text-center">MACBOOK</h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/236131/apple-macbook-pro-m1-2020-16gb-1tb-ssd-z11c000cj-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Macbook Pro M1 1TB SSD/Space Grey (Z11C000CJ)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >52.490.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/231254/apple-macbook-pro-2020-myd92saa-2-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">MacBook Pro M1 512GB/Space Grey (MYD92SA/A)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >36.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/239235/macbook-pro-m1-2020-mydc2saa-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">MacBook Pro M1 512GB/Silver (MYDC2SA/A)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >36.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/231250/apple-macbook-air-2020-m1-mgn73saa-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">MacBook Air M1 2020 512GB/Space Grey (MGN73SA/A)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >33.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/231251/apple-macbook-air-2020-m1-mgna3saa-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">MacBook Air M1 512GB/Silver (MGNA3SA/A)</a></p>
+                      <strong>
+                      <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >33.990.000₫</a></p>
+                      </strong>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/231252/apple-macbook-air-2020-m1-mgne3saa-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">MacBook Air M1 512GB/Gold (MGNE3SA/A)</a></p>
+                      <strong>
+                      <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >33.990.000₫</a></p>
+                      </strong>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/239234/macbook-pro-m1-2020-myda2saa-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">MacBook Pro M1 256GB/Silver (MYDA2SA/A)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >31.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/231253/apple-macbook-pro-2020-m1-myd82saa-274121-084107-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">MacBook Pro M1 256GB/Space Grey (MYD82SA/A)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >31.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/231246/apple-macbook-air-2020-mgnd3saa-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">MacBook Air M1 2020 256GB (MGND3SA/A)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >127.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+                <div class="col-sm-3">
+                      <div class="price text-center">
+                        <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/231244/apple-macbook-air-2020-mgn63saa-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                        <p class="text-center"><a href="" style="text-decoration: none;">MacBook Air M1 256GB/Space Grey (MGN63SA/A)</a></p>
+                        <strong>
+                          <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >27.990.000₫</a></p>
+                        </strong>
+                      </div>
+                </div>
+            </div>
+         </div>
+         <div class="panel panel-primary" id ="ACER" style="margin-top: 7%;">
+          <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">ACER</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/235405/acer-aspire-7-a715-42g-r4st-r5-nhqaysv004-16-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Acer Aspire 7 A715 42G R4ST R5 5500U (NH.QAYSV.004)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >19.290.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/237636/acer-nitro-5-an515-45-r3sm-r5-nhqbmsv005-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="" style="text-decoration: none;">Acer Nitro 5 AN515 45 R3SM R5 5600H/144Hz (NH.QBMSV.005)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >22.490.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/236962/acer-aspire-7-a715-75g-52s5-i5-nhq85sv002-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Acer Aspire 7 A715 75G 52S5 i5 9300H (NH.Q85SV.002)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >20.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">.
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/235488/acer-aspire-3-a314-35-p6jf-nxa7ssv003-9-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Acer Aspire 3 A314 35 P6JF N6000 (NX.A7SSV.003)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >9.590.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/223656/acer-aspire-a315-56-34ay-i3-nxhs5sv007-9-223656-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">Acer Nitro 5 A515 55 72R2 i7 10870H (NH.Q7NSV.005)</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >25.490.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/208861/acer-swit-5-sf514-53t-740r-i7-8565u-8gb-256gb-14f-152021-022040-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">Acer Swift 5 SF514 53T 740R i7 8565U (NX.H7KSV.002)</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >24.990.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/201237/acer-swift-sf5-i7-8565u-8gb-256gb-win10-150921-020906-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Acer Swift 5 SF514 53T 720R i7 8565U (NX.H7HSV.002)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >24.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/223654/acer-aspire-a315-56-308n-i3-nxhs5sv00c-15-223654-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Acer Aspire A315 56 308N i3 1005G1 (NX.HS5SV.00C)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >11.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/224582/acer-aspire-3-a315-n5030-nxhe3sv00h-224582-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Acer Aspire 3 A315 34 P26U N5030 (NX.HE3SV.00H)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >10.690.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/231082/acer-aspire-5-a514-54-33wy-i3-nxa23sv00j-021220-101200-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Acer Aspire 5 A514 54 33WY i3 1115G4 (NX.A23SV.00J)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >8.390.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+          </div>
+        </div>
+        <div id="HP" class="panel panel-primary" style="margin-top: 7%;">
+          <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">HP</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/237630/hp-340s-g7-i3-240q4pa-13-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">HP 340s G7 i3 1005G1 (240Q4PA)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >12.390.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/238016/hp-15s-du1108tu-i3-2z6l7pa-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="" style="text-decoration: none;">HP 15s du1108TU i3 10110U (2Z6L7PA)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >12.290.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/236147/hp-pavilion-15-eg0007tu-i3-2d9k4pa-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">HP Pavilion 15 eg0007TU i3 1115G4 (2D9K4PA)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >14.190.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/235978/hp-probook-440-g8-i3-2h0r6pa-17-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">HP ProBook 440 G8 i3 1115G4 (2H0R6PA)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >14.090.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/238015/hp-340s-g7-i5-36a35pa-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">HP 340s G7 i5 1035G1 (36A35PA)</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >17.390.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/230555/hp-envy-15-ep1045tx-i7-231v7pa-15-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">HP Envy 15 ep1045TX i7 10750H (231V7PA)</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >53.490.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/236426/hp-omen-15-ek0078tx-i7-26y68pa-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">HP Omen 15 ek0078TX RTX2070 Max-Q</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >52.490.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/236427/hp-omen-15-ek0079tx-i7-26y69pa-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">HP Omen 15 ek0079TX RTX2060</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >50.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/232152/hp-elitebook-x360-1040-g7-i7-230p8pa-23-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;"> HP EliteBook X360 1040 G7 i7 10710U (230P8PA)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >48.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/232150/hp-elitebook-x360-830-g7-i7-230l5pa-thumb-1-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">HP EliteBook X360 830 G7 i7 10510U (230L5PA)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >41.590.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+          </div>
+        </div>
+        <div id="ASUS" class="panel panel-primary" style="margin-top: 7%;">
+          <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">ASUS</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/239157/asus-zenbook-ux482eg-i5-ka166t-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">Asus ZenBook UX482EG i5 1135G7 (KA166T)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >33.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/236769/asus-tuf-gaming-fx516pm-i7-hn023t-14-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="" style="text-decoration: none;">Asus TUF Gaming FX516PM i7 11370H (HN023T)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >32.190.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/234614/TUF1-600x400.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Asus TUF Gaming FX506LI i7 10870H (HN096T)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >24.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/225940/asus-gaming-rog-strix-g512-i5-ial031t-225940-225940-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Asus Gaming Rog Strix G512 i5 10300H/144Hz (IAL013T)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >22.490.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/235372/asus-zenbook-ux325ea-i5-eg079t-thumb-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;"> Asus ZenBook UX325EA i5 1135G7 (EG079T)</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >21.990.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/239460/asus-vivobook-s533eq-i5-1135g7-8gb-512gb-2gb-mx350-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">Asus VivoBook S533EQ i5 1135G7 (BN161T)</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >21.890.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/239462/asus-vivobook-s533eq-i5-1135g7-8gb-512gb-2gb-mx350-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Asus VivoBook S533EQ i5 1135G7 (BQ011T)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >21.290.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/234613/TUF2-600x400.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Asus TUF Gaming FX506LI i5 10300H (HN039T)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >20.490.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/239459/asus-vivobook-s533ea-i5-1135g7-8gb-512gb-win10-bn-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Asus VivoBook S533EA i5 1135G7 (BN115T)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >19.890.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/239458/asus-vivobook-s533ea-i5-1135g7-8gb-512gb-win10-bq-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">Asus VivoBook S533EA i5 1135G7 (BQ018T)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >19.290.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+          </div>
+        </div>
+        <div class="panel panel-primary" id="MSI" style="margin-top: 7%;">
+          <div class="panel panel-primary " style="margin-left: 30%;margin-right: 30%; margin-top: -2%;">
+              <h3 class="text-center">MSI</h3>
+          </div>
+          <div class="row">
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/238608/msi-gf63-10sc-i5-255v-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="./ChiTietDienThoai.html" style="text-decoration: none;">MSI GF63 10SC i5 10300H (255VN)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="./ChiTietDienThoai.html" class="text-danger" style="text-decoration: none;"  >19.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/238606/msi-gf75-thin-10scxr-i7-068vn-600x600.jpg" alt="" style="width: 300px;"></a>
+                  <p class="text-center"><a href="" style="text-decoration: none;">MSI GF75 Thin 10SCXR i7 10750H (068VN)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >22.490.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/225857/msi-gaming-leopard-10sdr-gl65-i7-242vn-16-600x600.jpg " alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">MSI Gaming GL65 Leopard 10SDK i7 10750H/144Hz (242VN)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >30.990.000₫</a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                    <div class="price text-center">
+                      <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/238607/msi-gf65-thin-10ue-i5-297vn-600x600.jpg" alt="" style="width: 300px;"></a>
+                      <p class="text-center"><a href="" style="text-decoration: none;">MSI GF65 Thin 10UE i5 10500H (297VN)</a></p>
+                      <strong>
+                        <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >27.990.000₫ </a></p>
+                      </strong>
+                    </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="price text-center">
+                    <a href="./ChiTietDienThoai.html"><img class="zoom" src="https://cdn.tgdd.vn/Products/Images/44/235499/msi-gl65-leopard-10scxk-i7-093vn-16-600x600.jpg" alt="" style="width: 300px;"></a>
+                    <p class="text-center"><a href="" style="text-decoration: none;">MSI GL65 Leopard 10SCXK i7 10750H (093VN)</a></p>
+                    <strong>
+                    <p class="text-center "><a href="" class="text-danger" style="text-decoration: none;"  >23.990.000₫</a></p>
+                    </strong>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="chanTrang">
+    <div class="NoiDung text-center">
+      <div class="row row-con">
+        <div class="col-sm-3  text-center">
+            <div class="ThongTinLienHe">
+                <div class="ThongTinLienHe">
+                    <h5>THÔNG TIN LIÊN HỆ</p>
+                </div>
+                <div class="dienthoai">
+                        <a href="./ChiTietDienThoai.html"><i class="fas fa-phone"></i> 0939430991</a>
+                </div>
+                <div class="email">
+                        <a href="./ChiTietDienThoai.html"><i class="fas fa-envelope-square"></i> lql@vku.udn.vn</a>
+                </div>
+                <div class="diachi">
+                    <a href="./ChiTietDienThoai.html"><i class="fas fa-map-marker-alt"></i> ĐỊA CHỈ</a>
+                    <p>ĐẠI HỌC VIỆT-HÀN VKU</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3835.7388104523375!2d108.25104871482851!3d15.975010588939169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142108997dc971f%3A0x1295cb3d313469c9!2sKorea%20-%20Vietnam%20Friendship%20Information%20Technology%20College!5e0!3m2!1sen!2s!4v1621347143074!5m2!1sen!2s" width="60%"style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 text-center">
+          <h5>CÁC LOẠI GIẤY CHỨNG NHẬN</p>
+            <div class="giaychungnhan panel panel-default">
+                <img src="http://online.gov.vn/Content/EndUser/LogoCCDVSaleNoti/logoSaleNoti.png" alt="" class="logoGCN">
+                <img src="https://fbeauty.vn/template/temp_2020/images/logo-beauty.png" alt="" class="logoGCN">
+                <img src="https://images.dmca.com/Badges/dmca_protected_31_120.png" alt="" class="logoGCN">
+
+            </div>
+        </div>
+        <div class="col-sm-3 text-center">
+            <h5>HỖ TRỢ MUA BÁN</h5>
+            <ul class="hotro">
+                <li><a href="" style="margin-right: 10%;">Hỗ Trợ Đăng Tin</a></li>
+                <li><a href="" style="margin-right: 10%;">Tin Tức & Khuyến Mãi</a></li>
+                <li><a href="" style="margin-right: 10%;">Địa Điểm Mua Bá</a></li>
+                <li><a href="" style="margin-right: 10%;">Hướng Dẫn Thanh Toán</a></li>
+                <li><a href="" style="margin-right: 10%;">Chính Sách Bảo Mật</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3 text-center">
+            <h5>MẠNG XÃ HỘI & TẢI VỀ</h5>
+            <div class="MangXaHoi">
+                <ul>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-youtube"></i> YOUTUBE</a></li>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-facebook"></i> FACEBOOK</a></li>
+                    <li><a href="" style="margin-right: 10%;"><i class="fab fa-twitter-square"></i> TWITTER</a></li>
+                </ul>
+                <!-- <HR></HR> -->
+                <!-- <img src="./CSS/img" alt="" class="logo"> -->
+                <!-- <img src="./Css/img/logo.png" alt="" class="logo"> -->
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="https://dembuon.vn/lib/xmas.js"></script>
+<script src="./js/kiemtra.js"></script>
+</body>
+</html>
